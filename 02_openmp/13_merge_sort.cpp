@@ -41,9 +41,13 @@ int main() {
     printf("%d ",vec[i]);
   }
   printf("\n");
+#pragma omp parallel
+ {
   merge_sort(vec, 0, n-1);
+ }  
   for (int i=0; i<n; i++) {
     printf("%d ",vec[i]);
   }
   printf("\n");
+ 
 }
